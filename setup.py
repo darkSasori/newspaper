@@ -44,6 +44,7 @@ if sys.version_info[0] == 3 and sys.argv[-1] != 'upload':
 
 packages = [
     'newspaper',
+    'newspaper.videos',
 ]
 
 
@@ -63,4 +64,12 @@ setup(
     install_requires=required,
     license='MIT',
     zip_safe=False,
+    package_data={
+        "newspaper": [
+            "resources/*",
+            "resources/images/*",
+            "resources/misc/*",
+            "resources/text/*"
+            ]
+        }
 )
